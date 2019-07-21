@@ -318,21 +318,7 @@ Imóveis com mais espaços de estacionamento não aparentam ter relação com o 
 
 ```python
 df_clone = df_sem_outlier[['price','bathrooms','bedrooms','parkingSpaces','totalAreas','usableAreas']]
-df_clone.bathrooms.max()
-df_clone.bedrooms.max()
-df_clone.parkingSpaces.max()
-df_clone.totalAreas.max()
-df_clone.price.max()
-df_clone.usableAreas.max()
 ```
-
-
-
-
-    410.0
-
-
-
 
 ```python
 data = [
@@ -360,6 +346,14 @@ poff.iplot(fig, filename = 'parcoords-basic')
 
 Como estão dispostas as casas de acordo com a localidade geográfica?
 
+```python
+cmap = sns.cubehelix_palette(as_cmap=True)
+f, ax = plt.subplots(figsize=(15,15))
+points = ax.scatter(df_sem_outlier.lat, df_sem_outlier.lon, c=df_sem_outlier.price, s=50, cmap=cmap)
+f.colorbar(points)
+```
+
+![png](images/output_47_1.png)
 
 ```python
 kmeans = KMeans(n_clusters=10)
@@ -383,6 +377,8 @@ plt.scatter(cluster[y_km ==8].lat, cluster[y_km == 8].lon, s=100, c='greenyellow
 plt.scatter(cluster[y_km ==9].lat, cluster[y_km == 9].lon, s=100, c='turquoise')
 ```
 
+![png](images/output_48_1.png)
+
 Como as variáveis numéricas estão correlacionadas?
 
 
@@ -391,6 +387,7 @@ g = sns.PairGrid(df_sem_outlier, vars=['bathrooms', 'bedrooms', 'parkingSpaces',
 g.map(plt.scatter, alpha=0.8)
 g.add_legend();
 ```
+![png](images/output_50_1.png)
 
 Como o tipo de imóvel se relaciona com o preço?
 
@@ -399,16 +396,19 @@ Como o tipo de imóvel se relaciona com o preço?
 sns.catplot(x="price",y="unitTypes",data=df_sem_outlier,  height = 15)
 ```
 
+![png](images/output_52_1.png)
 
 ```python
 sns.catplot(x="price", y="unitTypes", kind="box", col="publicationType", data=df_sem_outlier, height = 15);
 ```
 
+![png](images/output_53_0.png)
 
 ```python
 sns.catplot(x="price", y="unitTypes", kind="violin", col="publicationType", data=df_sem_outlier, height = 15);
 ```
 
+![png](images/output_54_0.png)
 
 ```python
 df_sem_outlier.iplot(
