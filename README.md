@@ -60,25 +60,6 @@ cf.go_offline()
 cf.set_config_file(offline=False, world_readable=True)
 ```
 
-
-        <script type="text/javascript">
-        window.PlotlyConfig = {MathJaxConfig: 'local'};
-        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-        if (typeof require !== 'undefined') {
-        require.undef("plotly");
-        requirejs.config({
-            paths: {
-                'plotly': ['https://cdn.plot.ly/plotly-latest.min']
-            }
-        });
-        require(['plotly'], function(Plotly) {
-            window._Plotly = Plotly;
-        });
-        }
-        </script>
-        
-
-
 Agora será realizada a importação dos dados em formato json. Antes disso, foi criado um diretório raiz com a pasta json, e nela estão contidos os arquivos com os dados de treinamento e teste necessários para as análises. 
 Cabe mencionar que foi necessário utilizar o argumento **encoding** devido à presença de acentos e demais símbolos no arquivo. O argumento **Lines** foi utilizado para poder ler com sucesso arquivos json separados por linhas.
 
