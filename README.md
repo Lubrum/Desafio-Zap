@@ -547,7 +547,7 @@ print('R^2 :', lgb_.score(X_test_df, y_test))
 ```
 
 
-![png](output_77_0.png)
+![png](images/output_77_0.png)
 
 
     Mean Squared Error : 10190447972.04698
@@ -572,7 +572,7 @@ plt.show()
 ```
 
 
-![png](output_78_0.png)
+![png](images/output_78_0.png)
 
 
 # Treinamento/Teste com SVR (Support Vector Regressor)
@@ -644,7 +644,7 @@ print('R^2 :', mlp.score(X_test_df, y_test))
 ```
 
 
-![png](output_84_0.png)
+![png](images/output_84_0.png)
 
 
     Mean Squared Error : 15360529593.187231
@@ -703,7 +703,7 @@ print('R^2 :', xgb_.score(X_test_df, y_test))
     
 
 
-![png](output_87_1.png)
+![png](images/output_87_1.png)
 
 
     Mean Squared Error : 11465090474.478434
