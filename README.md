@@ -3,12 +3,17 @@
 
 Olá. O objetivo deste projeto é realizar análises descritivas, visuais e preditivas sobre dados de locações imobiliárias utilizando exclusivamente a linguagem Python, e responder as seguintes questões:
 
-Você utilizaria a métrica escolhida para seleção de modelo também para comunicar os resultados para usuários e stakeholders internos? Em caso negativo, qual outra métrica você utilizaria nesse caso?
+**Você utilizaria a métrica escolhida para seleção de modelo também para comunicar os resultados para usuários e stakeholders internos? Em caso negativo, qual outra métrica você utilizaria nesse caso?
 Em quais bairros ou em quais faixas de preço o seu modelo performa melhor?
 Se você tivesse que estimar o valor dos imóveis com apenas 3 campos, quais seriam eles?
-Como você vislumbra colocar a sua solução em produção?
+Como você vislumbra colocar a sua solução em produção?**
 
 Apesar da minha experiência anterior ter sido com trabalhos na linguagem R, assumi o desafio de desenvolver uma solução (em uma linguagem que recentemente comecei a trabalhar e aprender, através de cursos online) para o problema proposto pelo Grupo Zap. 
+
+O projeto contém o diretório csv, com os arquivos com os resultados das predições.
+O diretório images contém as imagens geradas neste tutorial.
+O diretório py contém o código fonte deste tutorial, com comentários incluídos.
+O diretório json deveria conter os arquivos de treinamento e teste, porém por limitações do guthub não foi possível inserí-los.
 
 # Importação de bibliotecas necessárias e dos conjuntos de dados
 
