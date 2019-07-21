@@ -465,8 +465,7 @@ df_copy = ce_bin.fit_transform(df_copy)
 
 # Criação dos modelos: Treinamento e teste
 
-Agora serão realizados os testes com os algoritmos de regressão. Primeiramente será realizada uma divisão entre base de dados de treinamento e de teste. Será utilizada a divisão 75% treinamento e 25% para teste (com os registros da parte do treinamento), com a função **train_test_split**. 
-Também Foi verificado que as colunas **'businessType_0','businessType_1','period_0','period_1' e 'period_2'** estavam gerando ruído no modelo, portanto foram previamente eliminadas. Também separados o conjunto final dos dados de teste.
+Agora serão realizados os testes com os algoritmos de regressão. Primeiramente será realizada uma divisão entre base de dados de treinamento e de teste. Será utilizada a divisão 75% treinamento e 25% para teste (com os registros da parte do treinamento), com a função **train_test_split**. Também separados o conjunto final dos dados de teste.
 
 
 ```python
