@@ -1,12 +1,7 @@
 # Desafio-Zap
 
 
-Olá. O objetivo deste projeto é realizar análises descritivas, visuais e preditivas sobre dados de locações imobiliárias utilizando exclusivamente a linguagem Python, e responder as seguintes questões:
-
-**Você utilizaria a métrica escolhida para seleção de modelo também para comunicar os resultados para usuários e stakeholders internos? Em caso negativo, qual outra métrica você utilizaria nesse caso?
-Em quais bairros ou em quais faixas de preço o seu modelo performa melhor?
-Se você tivesse que estimar o valor dos imóveis com apenas 3 campos, quais seriam eles?
-Como você vislumbra colocar a sua solução em produção?**
+Olá. O objetivo deste projeto é realizar análises descritivas, visuais e preditivas sobre dados de locações imobiliárias utilizando exclusivamente a linguagem Python.
 
 Apesar da minha experiência anterior ter sido com trabalhos na linguagem R, assumi o desafio de desenvolver uma solução (em uma linguagem que recentemente comecei a trabalhar e aprender, através de cursos online) para o problema proposto pelo Grupo Zap. 
 
@@ -724,19 +719,3 @@ results = pd.concat([df_teste['id'], results], axis=1).rename(columns={0:'price'
 results.to_csv(r'C:\Users\Dell\Desktop\Untitled Folder\csv\Results.csv', index = False)
 results.to_excel("csv\Results.xlsx", index = False)  
 ```
-
-**Você utilizaria a métrica escolhida para seleção de modelo também para comunicar os resultados para usuários e stakeholders internos? Em caso negativo, qual outra métrica você utilizaria nesse caso?**
-
-Sim, eu utilizaria como métrica de seleção de modelos o r^2 (coeficiente de determinação), além do MSE e MAE (erro médio padrão e erro médio absoluto), pois são as métricas de erro de regressores convencionais e mais populares, que foram utilizadas para avaliar cada modelo. Se os stakeholders necessitassem de outras métricas ou formas de comprovação de que tais modelos são de fato melhores, poderia ser realizada uma pesquisa mais avançada em publicações de artigos e poderiam ser explorados os resultados visuais dos modelos, indo além de apenas os valores preditos e reais.
-
-**Em quais bairros ou em quais faixas de preço o seu modelo performa melhor?**
-
-Observando os resultados dos melhores modelos, foi verificado que o modelo funciona melhor nas faixas de preços entre 100.000 e 600.000 reais. A razão disso é devido ao maior número de amostras concentrado nessas faixas de preços. A remoção dos outliers nas etapas de pré-processamento favoreceram na criação de um modelo mais preciso, porém mais instável na presença de valores muito altos, que é onde o modelo acaba realizando predições mais imprecisas que em faixas de preços inferiores.
-
-**Se você tivesse que estimar o valor dos imóveis com apenas 3 campos, quais seriam eles?**
-
-Para fundamentar essa resposta, foi gerado um gráfico com o resultado do lgbm, onde é possível verificar cinco variáveis em destaque: área utilizável, mensalidade de condomínio, IPTU anual, área total e número de banheiros. Eu escolho os campos área utilizável, IPTU anual e área total como os melhores preditores, por serem independentes da classe de imóvel, já que mensalidade de condomínio é específica para imóveis deste tipo, não abrangendo o caso geral dos imóveis.
-
-**Como você vislumbra colocar a sua solução em produção?**
-
-Infelizmente não tenho experiências anteriores com a disponibilização dos modelos de ML através de websites, aplicativos e outras maneiras. Porém, tenho seis meses de experiência com desenvolvimento de website com tecnologias convencionais web e seis meses de experiência com desenvolvimento de aplicativo com o framework Ionic. Acredito que, em conjunto com os times de ciência de dados, desenvolvedores e stakeholders, poderiam ser adotadas as melhores estratégias para inserir o melhor modelo de ML para predição de preços de imóveis em produção.
