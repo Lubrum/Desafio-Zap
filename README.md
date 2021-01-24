@@ -1,3 +1,5 @@
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Lubrum/Desafio-Zap) ![GitHub last commit](https://img.shields.io/github/last-commit/Lubrum/Desafio-Zap) ![GitHub repo size](https://img.shields.io/github/repo-size/Lubrum/Desafio-Zap)
+
 # Desafio-Zap
 
 
